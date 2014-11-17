@@ -24,7 +24,7 @@ void setup(){
    y+=velY;
    if (y+sz/2>height){
      y=height-sz/2;
-     velY = -abs(velY);
+     velY = -abs(velY)*0.9;
    }
  }
   
