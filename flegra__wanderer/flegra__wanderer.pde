@@ -8,13 +8,13 @@ PVector acc;
    
   loc = new PVector (width/2, height/2);
   vel= new PVector(0,0);
-  acc= new PVector (random(-0.01,0.01), random( -0.01,0.01));
+  acc= new PVector (random(-0.1,0.1), random( -0.1,0.1));
   
    
  }
  
  void draw(){
-   acc.set (random(-0.01,0.01),random (-0.01,0.01));
+   acc.set (random(-0.1,0.1),random (-0.1,0.1));
 
    vel.add(acc);
   
