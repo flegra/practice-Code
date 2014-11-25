@@ -1,26 +1,30 @@
+int count =2;
+PVector[] loc= new PVector [count];
+PVector[] vel= new PVector [count];
+PVector[] acc= new PVector [count];
+float[] sz= new float[count];
 
-PVector loc, vel, acc;
-PVector loc2, vel2, acc2;
-int sz2 = 200;
-int sz= 70;
+
 void setup() {
+  frameRate (200);
   size(800, 600);
-  loc= new PVector(width/2, height/2);
-  vel= PVector.random2D();
-  acc=new PVector(0, 0);
-  loc2= new PVector(width/2, height/2);
-  vel2= PVector.random2D();
-  acc2=new PVector(0, 0);
+  for (int i = 0; i < count; i++) {
+    sz[i] = random(20,40);
+  loc[i]= new PVector(ramdom(sz[i], width-sz[i]), random(sz[i], height- sz[i]));
+  vel[i]= PVector.random2D();
+  acc[i]=new PVector(0, 0);
+  }
 }
 
 void draw() {
 background(0);
-  vel.add(acc);
-  loc.add(vel);
-  vel2.add(acc2);
-  loc2.add(vel2);
+for(int i = 0, i< count; i++){
+  vel[i].add(acc[i]);
+  loc[i].add(vel[i]);
 
 
+for0 int j = 0; j< count; j++){
+  if (i! = j){
   if (loc.dist(loc2) < sz/2 + sz2/2 ) {
     fill(255, 0, 0);
     if (loc.x <loc2.x) {
