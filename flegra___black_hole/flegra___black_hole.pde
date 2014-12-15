@@ -2,6 +2,7 @@ class BouncyBall {
   PVector loc, vel, acc;
   float sz;
   float speed;
+  float tempspeed=2;
 
   BouncyBall(float tempsz, float tempspeed) {
     sz= tempsz;
@@ -39,9 +40,9 @@ class BouncyBall {
       vel.setMag(speed);
     }
   }
-  void go Away()
-    loc.set(width*10, height height* 10);
-  vel, se(0, 0);
+  void goAway(){
+    loc.set(width*10, height (height* 10));
+  vel. set(0, 0);
 }
 void teleport() {
   loc.set(mouseX, mOuseY);
