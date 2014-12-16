@@ -5,7 +5,7 @@ void setup() {
 }
 
 void draw() {
-  particles.add(new Particle(mouseX, mouseY));
+  particles.add(new Particle(random(50,400),random(50,300)));
   for ( int i = particles.size () - 1; i>=0; i--) {
     Particle p= particles.get(i);
     p.display();
