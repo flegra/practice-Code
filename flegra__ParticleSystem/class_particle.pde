@@ -6,14 +6,14 @@
     
     Particle(float x, float y) {
       sz= 5;
-      loc= new PVector(50,50);
-      vel= new PVector(random(-3, 3), random(-3, -1));
-      acc= new PVector(0, 0.1);
+      loc= new PVector(100,200);
+      vel= new PVector(10,random(-9,-8));
+      acc= new PVector(0, 0.3);
     }
 
     void display() {
       noStroke();
-      fill(80,230,255, 50);
+      fill(80,230,255, 100);
       ellipse(loc.x, loc.y, sz, sz);
     }
 
