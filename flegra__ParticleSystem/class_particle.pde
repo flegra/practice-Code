@@ -1,11 +1,11 @@
  class Particle {
-    int sz;
+    float sz;
     PVector vel;
     PVector acc;
     PVector loc;
     
     Particle(float x, float y) {
-      sz= 5;
+      sz= 1.5;
       loc= new PVector(100,200);
       vel= new PVector(10,random(-9,-8));
       acc= new PVector(0, 0.3);
@@ -13,7 +13,7 @@
 
     void display() {
       noStroke();
-      fill(80,230,255, 100);
+      fill(255,255,255);
       ellipse(loc.x, loc.y, sz, sz);
     }
 

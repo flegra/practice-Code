@@ -1,13 +1,16 @@
 ArrayList <Particle> particles= new ArrayList < Particle>(); 
 PImage castle;
+PImage tink;
 void setup() {
   size (800, 600);
   castle=loadImage("castle.jpeg");
+  tink= loadImage("tinkerbell.gif");
 }
 
 void draw() {
   background(0);
   image(castle, 0,0,800, 600);
+  image(tink,50,180,50,50);
   if(mousePressed){
     
   particles.add(new Particle(random(50,400),random(50,300)));
